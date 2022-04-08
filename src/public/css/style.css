@@ -93,6 +93,13 @@ button.primary:hover, a.button.primary:hover {
     border-color: #0a58ca;
 }
 
+
+.header-spacer::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+
 @media (max-width: 350px) {
     .brand-text {
         font-size: 18px;
