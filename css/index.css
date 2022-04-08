@@ -1,0 +1,119 @@
+.main-bg {
+    height: calc(100vh - 60px);
+}
+.main-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/notepad.jpg') no-repeat center/cover;
+    height: 100vh;
+    filter: brightness(40%) saturate(80%);
+}
+
+.start-button-wrap {
+    width: 200px;
+    height: 80px;
+}
+.main-text-wrap {
+    user-select: none;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-text-wrap .main-text {
+    font-family: "Nanum Garam";
+    font-size: 96px;
+    color: #fff;
+    margin-bottom: 80px;
+}
+.main-text-wrap .start-button {
+    font-family: 'Inter Medium';
+    font-size: 25px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 기본 버튼 스타일 */
+button, a.button {
+    display: block;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 4px;
+    width: 100%;
+    height: 33px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+button.round-button, a.round-button {
+    border-radius: 50px;
+    border: 2px solid #fff;
+    height: 100%;
+}
+button.round-button:hover, a.round-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* 포인트 컬러 */
+.primary {
+    background-color: #0d6efd;
+    color: #fff;
+}
+button.primary:hover, a.button.primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.content::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+.content {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .main-text-wrap .main-text {
+        font-size: 70px;
+        margin-bottom: 60px;
+    }
+}
+@media (max-width: 544px) {
+    .main-text-wrap .main-text {
+        font-size: 45px;
+        margin-bottom: 40px;
+    }
+
+    .main-text-wrap .start-button-wrap {
+        width: 150px;
+        height: 60px;
+    }
+    .main-text-wrap .start-button {
+        font-size: 18px;
+    }
+}
+@media (max-width: 350px) {
+    .main-text-wrap .main-text {
+        font-size: 35px;
+        margin-bottom: 35px;
+    }
+
+    .main-text-wrap .start-button-wrap {
+        width: 120px;
+        height: 55px;
+    }
+    .main-text-wrap .start-button {
+        font-size: 15px;
+    }
+}
