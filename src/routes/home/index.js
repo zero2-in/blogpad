@@ -1,8 +1,12 @@
 import express from 'express';
 const router = express.Router();
 
-router.get("/test", (req, res) => {
-    res.send("test");
+router.get("/", (req, res) => {
+    res.redirect("/index");
+});
+
+router.get("/index", (req, res) => {
+    res.render("home/index");
 });
 
 export default router;

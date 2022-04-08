@@ -42,18 +42,6 @@
     align-items: center;
 }
 
-/* 기본 버튼 스타일 */
-button, a.button {
-    display: block;
-    background-color: transparent;
-    border: transparent;
-    border-radius: 4px;
-    width: 100%;
-    height: 33px;
-    cursor: pointer;
-    transition: all .3s;
-}
-
 button.round-button, a.round-button {
     border-radius: 50px;
     border: 2px solid #fff;
@@ -62,16 +50,6 @@ button.round-button, a.round-button {
 button.round-button:hover, a.round-button:hover {
     background-color: #fff;
     color: #000;
-}
-
-/* 포인트 컬러 */
-.primary {
-    background-color: #0d6efd;
-    color: #fff;
-}
-button.primary:hover, a.button.primary:hover {
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
 }
 
 .content::before {
