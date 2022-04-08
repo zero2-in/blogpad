@@ -1,6 +1,15 @@
-const express = require('express');
+import express from 'express';
 const app = express();
+const PORT = 3000;
 
-app.listen(3000, () => {
-    console.log("Server opened");
+app.set("views", "./views");
+app.set("view engine", "ejs");
+app.use(express.static("public"));
+
+app.listen(PORT, () => {
+    console.log(`Server on ${PORT}`);
+});
+
+app.get("/", (req, res) => {
+    res.sendFile("./public/index.html");
 });
